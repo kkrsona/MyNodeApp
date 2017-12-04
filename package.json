@@ -17,11 +17,6 @@
 		"nodemon": "^1.12.1"
 	},
 
-	"scripts": {
-		"test": "PORT=8080 MONGO_URL=mongodb://starz:password@ds129776.mlab.com:29776/rambo node_modules/.bin/nyc node --harmony-proxies node_modules/.bin/ava"
-
-	},
-
 	"pre-commit": [
 		"lint",
 		"test"
