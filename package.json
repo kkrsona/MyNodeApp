@@ -15,5 +15,14 @@
   },
   "devDependencies": {
     "nodemon": "^1.12.1"
-  }
+  },
+
+   "pre-commit": {
+    "lint",
+    "test"
+  },
+
+      "require": {
+      "./tests/dbhelper.js"
+    }
 }
