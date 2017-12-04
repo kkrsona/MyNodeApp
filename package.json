@@ -1,32 +1,33 @@
 {
-  "name": "mysampleapp",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "dev": "nodemon server.js"
-  },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "body-parser": "^1.18.2",
-    "express": "^4.16.2",
-    "mongodb": "^2.2.33"
-  },
-  "devDependencies": {
-    "nodemon": "^1.12.1"
-  },
-  "scripts": {
-    "test": "cross-env NODE_ENV=test PORT=8080 MONGO_URL=mongodb://localhost:27017/mern-test node_modules/.bin/nyc node --harmony-proxies node_modules/.bin/ava",
-  
-  },
+	"name": "mysampleapp",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"dev": "nodemon server.js"
+	},
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"body-parser": "^1.18.2",
+		"express": "^4.16.2",
+		"mongodb": "^2.2.33"
+	},
+	"devDependencies": {
+		"nodemon": "^1.12.1"
+	},
 
-   "pre-commit": {
-    "lint",
-    "test"
-  },
+	"scripts": {
+		"test": "cross-env NODE_ENV=test PORT=8080 MONGO_URL=mongodb://localhost:27017/mern-test node_modules/.bin/nyc node --harmony-proxies node_modules/.bin/ava"
 
-      "require": {
-      "./tests/dbhelper.js"
-    }
+	},
+
+	"pre-commit": [
+		"lint",
+		"test"
+	],
+
+	"require": [
+		"./tests/dbhelper.js"
+	]
 }
